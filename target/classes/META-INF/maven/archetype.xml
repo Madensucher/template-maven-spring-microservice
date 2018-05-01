@@ -1,0 +1,30 @@
+<archetype xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype/1.0.0 http://maven.apache.org/xsd/archetype-1.0.0.xsd">
+    <id>spring-microservice</id>
+    <allowPartial>true</allowPartial>
+    <sources>
+        <source>src/main/java/AppMain.java</source>
+        <source>src/main/java/config/AppConfig.java</source>
+        <source>src/main/java/config/ExecutorCfg.java</source>
+        <source>src/main/java/config/MetricsConfig.java</source>
+        <source>src/main/java/config/WebMvcConfig.java</source>
+        <source>src/main/java/support/ErrorController.java</source>
+        <source>src/main/java/support/LoggerInterceptor.java</source>
+        <source>src/main/java/support/ResponseMessage.java</source>
+        <source>src/main/java/support/WebRequestFactory.java</source>
+        <source>src/main/java/demo/DemoController.java</source>
+    </sources>
+    <resources>
+        <resource>src/main/resources/application.yml</resource>
+        <resource>src/main/resources/logback.xml</resource>
+        <resource>.gitignore</resource>
+        <resource>README.md</resource>
+    </resources>
+    <testSources>
+        <resource>src/test/java/Template.java</resource>
+    </testSources>
+    <testResources>
+        <resource>src/test/resources/logback-test.xml</resource>
+    </testResources>
+</archetype>

@@ -1,0 +1,10 @@
+executor:
+  corePoolSize:  1
+  maxPoolSize:   3
+  queueCapacity: 20
+  threadNamePrefix: "StdPrefix-"
+
+graphite:
+  server: graphite.hypoport.local
+  port: 2003
+
