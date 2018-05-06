@@ -28,8 +28,7 @@ public class MetricsConfig {
     public GraphiteReporter graphiteReporter(MetricRegistry metricRegistry,
                                              @Value("${graphite.server}") String server,
                                              @Value("${graphite.port}") String port,
-                                             @Value("${spring.profiles.active}") String springProfilesActive) {
-        final String prefix = "applicationdata.${groupId}." + springProfilesActive + ".${artifactId}";
+                                             @Value("${graphite.prefix}") String prefix) {
         final Graphite graphite = new Graphite(new InetSocketAddress(server, new Integer(port)));
         final GraphiteReporter reporter = GraphiteReporter.forRegistry(metricRegistry)
                 .prefixedWith(prefix)

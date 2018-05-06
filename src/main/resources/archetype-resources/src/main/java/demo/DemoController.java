@@ -2,6 +2,7 @@ package ${groupId}.demo;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
+import io.micrometer.core.annotation.Timed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ public class DemoController {
     }
 
 
+    @Timed(value = "getDemo", percentiles = { 0.50, 0.75, 0.95, 0.99 }, extraTags = { "version", "v1" },description = "keine Beschreibung")
     @RequestMapping(method = RequestMethod.GET, path = "/demo")
     public ResponseEntity<String> getDemo() {
         log.info("/demo aufgerufen");

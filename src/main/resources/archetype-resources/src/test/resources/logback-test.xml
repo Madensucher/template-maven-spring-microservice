@@ -8,7 +8,7 @@
         </encoder>
     </appender>
 
-    <logger name="${groupId}" level="INFO" additivity="false">
+    <logger name="${groupId}" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
 

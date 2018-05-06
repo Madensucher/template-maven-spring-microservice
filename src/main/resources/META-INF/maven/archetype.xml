@@ -8,6 +8,7 @@
         <source>src/main/java/config/AppConfig.java</source>
         <source>src/main/java/config/ExecutorCfg.java</source>
         <source>src/main/java/config/MetricsConfig.java</source>
+        <source>src/main/java/config/MicrometerConfig.java</source>
         <source>src/main/java/config/WebMvcConfig.java</source>
         <source>src/main/java/support/ErrorController.java</source>
         <source>src/main/java/support/LoggerInterceptor.java</source>
